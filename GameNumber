@@ -21,7 +21,7 @@ for guessesTaken in range(6):
         print('Неа,твое число слишком маленькое.')
 
     if guess > number:
-        print('Ммм ... а сейчас слишком большое.')
+        print('Слишком большое.')
 
     if guess == number:
         break
