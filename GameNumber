@@ -1,0 +1,37 @@
+# Простая игра по угадыванию чисел с небольшим сценарием.
+ 
+import random
+
+guessesTaken = 0
+
+print('Привет! Как тебя зовут?')
+myName = input()
+print ('Введешь свой пол? (м\ж): ')
+p = str(input());
+
+number = random.randint(1, 20)
+print('Что ж, '+myName+', поиграем? Я загадываю число от 1 до 20.')
+
+for guessesTaken in range(6):
+    print('Попробуй угадать:)')
+    guess = input()
+    guess = int(guess)
+
+    if guess < number:
+        print('Неа,твое число слишком маленькое.')
+
+    if guess > number:
+        print('Ммм ... а сейчас слишком большое.')
+
+    if guess == number:
+        break
+
+if guess == number:
+  guessesTaken = str(guessesTaken + 1)
+  if p == 'ж':
+   print('Отлично, ' + myName + '! Ты справилась за ' + guessesTaken + ' попытки!')
+  if p == 'м':
+   print('Отлично, ' + myName + '! Ты справился за ' + guessesTaken + ' попытки!')
+if guess != number:
+    number = str(number)
+    print('Увы. Я загадал, '+number+'.')
