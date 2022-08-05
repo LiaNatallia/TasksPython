@@ -1,0 +1,29 @@
+# Самый простой калькулятор c небольшой цветокоррекцией
+from colorama import Fore, Back, Style
+
+print(Fore.CYAN)
+what = input('Что делаем?+(+, -, *, /):')
+
+
+print(Fore.YELLOW)
+a = float(input('Введи первое число: '))
+b = float(input('Введи второе число: '))
+
+if what == "+":
+    c = a + b
+    print('Результат: ' + str(c))
+elif what == "-":
+    c = a - b
+    print('Результат: ' + str(c))
+elif what == "*":
+    c = a * b
+    print('Результат: ' + str(c))
+elif what == "/":
+    if b == 0:
+        print('На ноль делить нельзя!')
+    else:
+        print('Результат: ' + str(a / b))
+
+
+else:
+    print('Выбрана неверная операция!')
